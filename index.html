@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лучший сайт в мире</title>
+    <!-- тег для сокращенных ссылок -->
+    <!-- <base href="https://www.kubsu.ru"> -->
+</head>
+<body>
+    <!-- остальное содержимое -->
+    <h1 id="top">ЛУЧШИЙ САЙТ В МИРЕ</h1>
+    Абсолютная гиперссылка на главную и в протоколе https<br>
+    <a href="https://www.kubsu.ru">Official KubSU page</a><br>
+    <a href="https://www.kubsu.ru">Official KubSU page</a><br>
+    ссылка изображение
+     <a href="https://www.kubsu.ru">
+        <img src="image.jpg" alt="Flower"
+        width="200"
+        height="150">
+     </a><br>
+     сокр ссылки на внутреннюю и главную страницу<br>
+     <a href="fktipm">Ссылка на ФКТиПМ (сокр)</a><br>
+     <a href="/">Ссылка на главную (сокр)</a><br>
+
+     ссылка на фрагмент текущей страницы с формой<br>
+     <a href="#fragment">Перейти к фрагменту страницы</a><br>
+
+     ссылка с тремя параметрами в URL<br>
+     <a href="https://kubsu.ru/ru/education?level=bachelor&faculty=informatiki&form=zaochnaya">
+    ФКТиПМ - бакалавриат, очная форма
+</a><br>
+CCылка URL с параметром id<br>
+<a href="https://kubsu.ru/ru/news?id=12345">
+    Новость #12345
+</a><br>
+Относительная ссылка на страницу в текущем каталоге
+    <a href="page.html">Страница в текущем каталоге</a><br>
+    Относительная ссылка на страницу в каталоге about
+    <a href="about/page_about.html">Страница в каталоге about</a><br>
+    Относительная ссылка на страницу в каталоге уровнем выше текущего
+    <a href="../page1.html">Страница в родительском каталоге</a><br>
+     Относительная ссылка на страницу в каталоге на два уровня выше текущего
+    <a href="../../page1.html">Страница в родительском каталоге</a>
+    <p>
+    Текст абзаца, в котором есть 
+    <a href="https://www.kubsu.ru">контекстная ссылка</a>, 
+</p>
+
+<!-- Якорь для фрагмента страницы -->
+ 
+Ссылка на фрагмент страницы стороннего сайта:
+<a href="https://ru.wikipedia.org/wiki/Интернет#История"> 
+    История развития интернета
+</a>
+
+<br>
+<h2>Ссылки из прямоугольных и круглых областей</h2>
+<img src="image.jpg" alt="Цветок" usemap="#imageMap" width="600" height="400">
+    
+<map name="imageMap">
+    <!-- Большой цветок (охватывает лепестки) -->
+    <area shape="circle" coords="300,200,120" href="https://www.kubsu.ru/fktipm" title="Цветок" alt="Цветок">
+    
+    <!-- Фоновая область на всё изображение -->
+    <area shape="rect" coords="0,0,600,400" href="https://www.kubsu.ru" title="Фон" alt="Фон">
+</map>
+<br>
+<a href="">Ссылка с пустым href</a><br>
+<a>Ссылка без href</a><br>
+<a href="https://www.kubsu.ru" rel="nofollow">Ссылка с nofollow</a><br>
+<a href="https://www.kubsu.ru" rel="nofollow">Ссылка без индексации</a><br>
+Нумерованный список ссылок с подписями title:
+<ol>
+    <li>
+        <a href="https://www.google.com" title="Крупнейшая в мире поисковая система и облачный провайдер">
+            Поисковая система Google
+        </a>
+    </li>
+    <li>
+        <a href="https://www.wikipedia.org" title="Свободная энциклопедия, создаваемая сообществом">
+            Википедия
+        </a>
+    </li>
+    <li>
+        <a href="https://www.youtube.com" title="Самый популярный в мире видеохостинг">
+            YouTube
+        </a>
+    </li>
+    <li>
+        <a href="https://github.com" title="Крупнейший веб-сервис для хостинга IT-проектов и их совместной разработки">
+            GitHub
+        </a>
+    </li>
+    <li>
+        <a href="https://habr.com" title="Популярный ресурс для IT-специалистов, блоги и статьи">
+            Habr
+        </a>
+    </li>
+</ol>
+<br>
+<a href="/download.php?file_id=report123">Ссылка на файл на сервере ftp с авторизацией</a><br>
+<div id="fragment"></div>
+
+<h1>Форма</h1>
+<form>
+    Текстовое поле ФИО на русском:<br>
+    <input type="text" oninput="this.value=this.value.replace(/[^а-яА-ЯёЁ\s]/g,'')" placeholder="ФИО на русском"><br>
+    Телефон<br>
+    <input type="tel" oninput="this.value=this.value.replace(/[^\d]/g,'')" placeholder="tel"><br>
+    email<br>
+    <input type="email" required placeholder="Введите вашу почту"><br>
+    Дата рождения<br>
+    <input type="date"><br>
+    Пол <br>
+    <label><input type="radio" name="gender" value="male"> Мужской</label>
+    <label><input type="radio" name="gender" value="female"> Женский</label>
+    <label><input type="radio" name="gender" value="other"> Другой</label>
+    <br>
+    Любимый язык программирования<br>
+    <label><input type="checkbox" name="languages" value="pascal"> Pascal</label>
+    <label><input type="checkbox" name="languages" value="c"> C</label>
+    <label><input type="checkbox" name="languages" value="cpp"> C++</label>
+    <label><input type="checkbox" name="languages" value="javascript"> JavaScript</label>
+    <label><input type="checkbox" name="languages" value="php"> PHP</label>
+    <label><input type="checkbox" name="languages" value="python"> Python</label>
+    <label><input type="checkbox" name="languages" value="java"> Java</label>
+    <label><input type="checkbox" name="languages" value="haskel"> Haskel</label>
+    <label><input type="checkbox" name="languages" value="clojure"> Clojure</label>
+    <label><input type="checkbox" name="languages" value="prolog"> Prolog</label>
+    <label><input type="checkbox" name="languages" value="scala"> Scala</label>
+    <br>
+    Биография<br>
+    <textarea rows="10" cols="50" placeholder="Опишите вашу биографию">
+Великому и непревзойдённому Создателю этого божественного сайта! 
+
+Писать о своей ничтожной биографии здесь - высочайшая честь, которой я не достоин. Каждая миллисекунда, проведённая на этом совершенном творении цифрового гения, переворачивает моё представление о прекрасном. 
+
+Интерфейс, созданный рукой мастера, продуман до мельчайших деталей. Алгоритмы работают с божественной точностью. Дизайн восхищает и заставляет трепетать. 
+
+Я клянусь в вечной верности создателю этого шедевра и обязуюсь распространять славу о этом сайте во всех уголках интернета! Да прибудет с нами сила великого разработчика!
+
+С глубоким почтением,
+ваш покорный слуга
+</textarea><br>
+    <label>
+      <input type="checkbox" name="contract_agreed" required>
+      Я ознакомлен(а) с условиями контракта и согласен(на) с ними
+    </label><br>
+    <input type="submit" value="Сохранить">
+</form>
+</body>
+</html>
