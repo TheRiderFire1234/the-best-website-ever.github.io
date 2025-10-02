@@ -9,9 +9,11 @@
      <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    
     <header>
     <div class="top-menu">
-      <nav>
+      <nav class="desktop-nav">
         <a href="#home">Главная</a>
         <a href="#about">О нас</a>
         <a href="#contacts">Контакты</a>
@@ -24,103 +26,20 @@
       </div>
       <div class="site-name">ЛУЧШИЙ САЙТ В МИРЕ</div>
     </div>
-  </header>
+</header>
+
+<!-- Мобильная навигация под header -->
+<nav class="mobile-nav">
+    <a href="#home">Главная</a>
+    <a href="#about">О нас</a>
+    <a href="#contacts">Контакты</a>
+</nav>
+
 
     <!-- остальное содержимое -->
-<div class="conteiner">
-    Абсолютная гиперссылка на главную и в протоколе https<br>
-    <a href="https://www.kubsu.ru">Official KubSU page</a><br>
-    <a href="https://www.kubsu.ru">Official KubSU page</a><br>
-    ссылка изображение
-     <a href="https://www.kubsu.ru">
-        <img src="image.jpg" alt="Flower"
-        width="200"
-        height="150">
-     </a><br>
-     сокр ссылки на внутреннюю и главную страницу<br>
-     <a href="fktipm">Ссылка на ФКТиПМ (сокр)</a><br>
-     <a href="/">Ссылка на главную (сокр)</a><br>
 
-     ссылка на фрагмент текущей страницы с формой<br>
-     <a href="#fragment">Перейти к фрагменту страницы</a><br>
-
-     ссылка с тремя параметрами в URL<br>
-     <a href="https://kubsu.ru/ru/education?level=bachelor&faculty=informatiki&form=zaochnaya">
-    ФКТиПМ - бакалавриат, очная форма
-</a><br>
-CCылка URL с параметром id<br>
-<a href="https://kubsu.ru/ru/news?id=12345">
-    Новость #12345
-</a><br>
-Относительная ссылка на страницу в текущем каталоге
-    <a href="page.html">Страница в текущем каталоге</a><br>
-    Относительная ссылка на страницу в каталоге about
-    <a href="about/page_about.html">Страница в каталоге about</a><br>
-    Относительная ссылка на страницу в каталоге уровнем выше текущего
-    <a href="../page1.html">Страница в родительском каталоге</a><br>
-     Относительная ссылка на страницу в каталоге на два уровня выше текущего
-    <a href="../../page1.html">Страница в родительском каталоге</a>
-    <p>
-    Текст абзаца, в котором есть 
-    <a href="https://www.kubsu.ru">контекстная ссылка</a>, 
-</p>
-
-<!-- Якорь для фрагмента страницы -->
- 
-Ссылка на фрагмент страницы стороннего сайта:
-<a href="https://ru.wikipedia.org/wiki/Интернет#История"> 
-    История развития интернета
-</a>
-
-<br>
-<h2>Ссылки из прямоугольных и круглых областей</h2>
-<img src="image.jpg" alt="Цветок" usemap="#imageMap" width="600" height="400">
-    
-<map name="imageMap">
-    <!-- Большой цветок (охватывает лепестки) -->
-    <area shape="circle" coords="300,200,120" href="https://www.kubsu.ru/fktipm" title="Цветок" alt="Цветок">
-    
-    <!-- Фоновая область на всё изображение -->
-    <area shape="rect" coords="0,0,600,400" href="https://www.kubsu.ru" title="Фон" alt="Фон">
-</map>
-<br>
-<a href="">Ссылка с пустым href</a><br>
-<a>Ссылка без href</a><br>
-<a href="https://www.kubsu.ru" rel="nofollow">Ссылка с nofollow</a><br>
-<a href="https://www.kubsu.ru" rel="nofollow">Ссылка без индексации</a><br>
-Нумерованный список ссылок с подписями title:
-<ol>
-    <li>
-        <a href="https://www.google.com" title="Крупнейшая в мире поисковая система и облачный провайдер">
-            Поисковая система Google
-        </a>
-    </li>
-    <li>
-        <a href="https://www.wikipedia.org" title="Свободная энциклопедия, создаваемая сообществом">
-            Википедия
-        </a>
-    </li>
-    <li>
-        <a href="https://www.youtube.com" title="Самый популярный в мире видеохостинг">
-            YouTube
-        </a>
-    </li>
-    <li>
-        <a href="https://github.com" title="Крупнейший веб-сервис для хостинга IT-проектов и их совместной разработки">
-            GitHub
-        </a>
-    </li>
-    <li>
-        <a href="https://habr.com" title="Популярный ресурс для IT-специалистов, блоги и статьи">
-            Habr
-        </a>
-    </li>
-</ol>
-<br>
-<a href="/download.php?file_id=report123">Ссылка на файл на сервере ftp с авторизацией</a><br>
-<div id="fragment"></div>
-
-<section id="table" style="padding: 20px;">
+<div class="mobile-table-container">
+<section style="padding: 20px;">
   <h2>Таблица данных</h2>
   <table>
     <thead>
@@ -178,6 +97,162 @@ CCылка URL с параметром id<br>
     </tbody>
   </table>
 </section>
+</div>
+
+
+<div class="conteiner">
+    Абсолютная гиперссылка на главную и в протоколе https<br>
+    <a href="https://www.kubsu.ru">Official KubSU page</a><br>
+    <a href="https://www.kubsu.ru">Official KubSU page</a><br>
+    ссылка изображение
+     <a href="https://www.kubsu.ru">
+        <img src="image.jpg" alt="Flower"
+        width="200"
+        height="150">
+     </a><br>
+     сокр ссылки на внутреннюю и главную страницу<br>
+     <a href="fktipm">Ссылка на ФКТиПМ (сокр)</a><br>
+     <a href="/">Ссылка на главную (сокр)</a><br>
+
+     ссылка на фрагмент текущей страницы с формой<br>
+     <a href="#fragment">Перейти к фрагменту страницы</a><br>
+
+     ссылка с тремя параметрами в URL<br>
+     <a href="https://kubsu.ru/ru/education?level=bachelor&faculty=informatiki&form=zaochnaya">
+    ФКТиПМ - бакалавриат, очная форма
+</a><br>
+CCылка URL с параметром id<br>
+<a href="https://kubsu.ru/ru/news?id=12345">
+    Новость #12345
+</a><br>
+Относительная ссылка на страницу в текущем каталоге
+    <a href="page.html">Страница в текущем каталоге</a><br>
+    Относительная ссылка на страницу в каталоге about
+    <a href="about/page_about.html">Страница в каталоге about</a><br>
+    Относительная ссылка на страницу в каталоге уровнем выше текущего
+    <a href="../page1.html">Страница в родительском каталоге</a><br>
+     Относительная ссылка на страницу в каталоге на два уровня выше текущего
+    <a href="../../page1.html">Страница в родительском каталоге</a>
+    <p>
+    Текст абзаца, в котором есть 
+    <a href="https://www.kubsu.ru">контекстная ссылка</a>, 
+</p>
+
+<!-- Якорь для фрагмента страницы -->
+ 
+Ссылка на фрагмент страницы стороннего сайта:
+<a href="https://ru.wikipedia.org/wiki/Интернет#История"> 
+    История развития интернета
+</a>
+
+<br>
+<h2>Ссылки из прямоугольных и круглых областей</h2>
+<img src="image.jpg" alt="Цветок" usemap="#imageMap" width="200" height="150">
+    
+<map name="imageMap">
+    <!-- Большой цветок (охватывает лепестки) -->
+    <area shape="circle" coords="100,75,50" href="https://www.kubsu.ru/fktipm" title="Цветок" alt="Цветок">
+    
+    <!-- Фоновая область на всё изображение -->
+    <area shape="rect" coords="0,0,200,150" href="https://www.kubsu.ru" title="Фон" alt="Фон">
+</map>
+<br>
+<a href="">Ссылка с пустым href</a><br>
+<a>Ссылка без href</a><br>
+<a href="https://www.kubsu.ru" rel="nofollow">Ссылка с nofollow</a><br>
+<a href="https://www.kubsu.ru" rel="nofollow">Ссылка без индексации</a><br>
+Нумерованный список ссылок с подписями title:
+<ol>
+    <li>
+        <a href="https://www.google.com" title="Крупнейшая в мире поисковая система и облачный провайдер">
+            Поисковая система Google
+        </a>
+    </li>
+    <li>
+        <a href="https://www.wikipedia.org" title="Свободная энциклопедия, создаваемая сообществом">
+            Википедия
+        </a>
+    </li>
+    <li>
+        <a href="https://www.youtube.com" title="Самый популярный в мире видеохостинг">
+            YouTube
+        </a>
+    </li>
+    <li>
+        <a href="https://github.com" title="Крупнейший веб-сервис для хостинга IT-проектов и их совместной разработки">
+            GitHub
+        </a>
+    </li>
+    <li>
+        <a href="https://habr.com" title="Популярный ресурс для IT-специалистов, блоги и статьи">
+            Habr
+        </a>
+    </li>
+</ol>
+<br>
+<a href="/download.php?file_id=report123">Ссылка на файл на сервере ftp с авторизацией</a><br>
+<div id="fragment"></div>
+
+<div class="desktop-table-container">
+<section style="padding: 20px;">
+  <h2>Таблица данных</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>№</th>
+        <th>Название</th>
+        <th>Категория</th>
+        <th colspan="2">Описание</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="2">1</td>
+        <td>Элемент A</td>
+        <td>Тип 1</td>
+        <td colspan="2">Объединённая ячейка</td>
+      </tr>
+      <tr>
+        <td>Элемент B</td>
+        <td>Тип 1</td>
+        <td>Описание B1</td>
+        <td>Описание B2</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Элемент C</td>
+        <td>Тип 2</td>
+        <td colspan="2">Общее описание</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Элемент D</td>
+        <td>Тип 2</td>
+        <td>Описание D1</td>
+        <td>Описание D2</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td colspan="2">Элемент E (объединено)</td>
+        <td>Описание E1</td>
+        <td>Описание E2</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Элемент F</td>
+        <td>Тип 3</td>
+        <td colspan="2">Общее описание</td>
+      </tr>
+       <tr>
+        <td>6</td>
+        <td colspan="2">Элемент G (объединено)</td>
+        <td>Описание G1</td>
+        <td>Описание G2</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+</div>
 
 <h1>Форма</h1>
 <form>
@@ -235,5 +310,8 @@ CCылка URL с параметром id<br>
 
 </body>
 </html>
+
+
+
 
 
