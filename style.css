@@ -1,25 +1,48 @@
+/* ===== БАЗОВЫЕ СТИЛИ (MOBILE FIRST) ===== */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
 
 header {
-  background-color: #58e845; /* новый фон */
+  background-color: #58e845;
   padding: 10px 20px;
 }
 
-/* Верхнее меню */
 .top-menu {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 10px;
 }
 
-nav {
+/* Навигация - мобильная версия по умолчанию */
+.mobile-nav {
   display: flex;
-  gap: 15px;
+  flex-direction: column;
+  width: 100%;
+  background: #333;
+  padding: 0;
 }
 
+.mobile-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  border-bottom: 1px solid #555;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.mobile-nav a:hover {
+  background: #3da52f;
+}
+
+/* Десктопная навигация скрыта по умолчанию */
+.desktop-nav {
+  display: none;
+}
+
+/* Общие стили для ссылок */
 nav a {
   color: white;
   text-decoration: none;
@@ -33,7 +56,58 @@ nav a:hover {
   background: #3da52f;
 }
 
-/* Левая часть: логотип и название */
+/* Таблицы - мобильная версия по умолчанию */
+.mobile-table-container {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 0;
+}
+
+.desktop-table-container {
+  display: none;
+}
+
+/* Контейнер по умолчанию */
+.container {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+}
+
+/* Стили таблицы для мобильных */
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  width: auto;
+  min-width: 100%;
+  max-width: none;
+  text-align: center;
+  font-size: 14px;
+}
+
+th, td {
+  border: 1px solid #000;
+  padding: 8px 10px;
+  white-space: nowrap;
+}
+
+thead th {
+  background: #333;
+  color: #fff;
+}
+
+/* Чередование цветов */
+tbody tr:nth-child(odd) {
+  background: #58e845;
+}
+
+tbody tr:nth-child(even) {
+  background: #76ff7a;
+}
+
+/* Логотип и название */
 .logo-container {
   display: flex;
   align-items: center;
@@ -63,38 +137,7 @@ nav a:hover {
   font-weight: bold;
 }
 
-
-
-/* Таблица */
-table {
-  border-collapse: collapse;
-  margin: 0 auto;        /* центрируем */
-  width: 100%;
-  max-width: 960px;      /* ограничение по ширине */
-  text-align: center;
-}
-
-th, td {
-  border: 1px solid #000;
-  padding: 10px;
-}
-
-thead th {
-  background: #333;
-  color: #fff;
-}
-
-/* Чередование цветов */
-tbody tr:nth-child(odd) {
-  background: #58e845;
-}
-
-tbody tr:nth-child(even) {
-  background: #76ff7a;
-}
-
-
-
+/* Футер */
 footer {
   background-color: #58e845;
   padding: 15px 20px;
@@ -107,9 +150,51 @@ footer p {
   font-weight: bold;
 }
 
-
-.conteiner {
-    max-width: 960px;
+/* ===== ДЕСКТОПНАЯ ВЕРСИЯ ===== */
+@media (min-width: 769px) {
+  .mobile-nav {
+    display: none;
+  }
+  
+  .desktop-nav {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .mobile-table-container {
+    display: none;
+  }
+  
+  .desktop-table-container {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .top-menu {
+    margin-bottom: 10px;
+  }
+  
+  .container {
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 20px
+    padding: 20px;
+  }
+  
+  table {
+    font-size: 16px;
+  }
+  
+  th, td {
+    padding: 10px;
+    white-space: normal;
+  }
+}
+
+/* ===== БОЛЬШИЕ ЭКРАНЫ ===== */
+@media (min-width: 1025px) {
+  .container {
+    max-width: 1400px;
+  }
 }
