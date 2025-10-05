@@ -1,4 +1,3 @@
-/* ===== БАЗОВЫЕ СТИЛИ (MOBILE FIRST) ===== */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -15,8 +14,6 @@ header {
   margin-bottom: 10px;
 }
 
-
-/* Навигация - мобильная версия по умолчанию */
 .mobile-nav {
   display: flex;
   flex-direction: column;
@@ -38,7 +35,10 @@ header {
   background: #3da52f;
 }
 
-/* Общие стили для ссылок */
+.desktop-nav {
+  display: none;
+}
+
 nav a {
   color: white;
   text-decoration: none;
@@ -52,7 +52,6 @@ nav a:hover {
   background: #3da52f;
 }
 
-/* Таблицы - мобильная версия по умолчанию */
 .mobile-table-container {
   display: block;
   width: 100%;
@@ -61,15 +60,16 @@ nav a:hover {
   margin-top: 0;
 }
 
+.desktop-table-container {
+  display: none;
+}
 
-/* Контейнер по умолчанию */
 .container {
   padding: 0;
   margin: 0;
   max-width: 100%;
 }
 
-/* Стили таблицы для мобильных */
 table {
   border-collapse: collapse;
   margin: 0 auto;
@@ -91,7 +91,6 @@ thead th {
   color: #fff;
 }
 
-/* Чередование цветов */
 tbody tr:nth-child(odd) {
   background: #58e845;
 }
@@ -100,7 +99,6 @@ tbody tr:nth-child(even) {
   background: #76ff7a;
 }
 
-/* Логотип и название */
 .logo-container {
   display: flex;
   align-items: center;
@@ -130,7 +128,6 @@ tbody tr:nth-child(even) {
   font-weight: bold;
 }
 
-/* Футер */
 footer {
   background-color: #58e845;
   padding: 15px 20px;
@@ -143,9 +140,19 @@ footer p {
   font-weight: bold;
 }
 
-/* ===== ДЕСКТОПНАЯ ВЕРСИЯ ===== */
-
+@media (min-width: 769px) {
+  .mobile-nav {
+    display: none;
+  }
   
+  .desktop-nav {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .mobile-table-container {
+    display: none;
+  }
   
   .desktop-table-container {
     display: block;
@@ -172,10 +179,10 @@ footer p {
     padding: 10px;
     white-space: normal;
   }
+}
 
-
-/* ===== БОЛЬШИЕ ЭКРАНЫ ===== */
-
+@media (min-width: 1025px) {
   .container {
     max-width: 1400px;
   }
+}
