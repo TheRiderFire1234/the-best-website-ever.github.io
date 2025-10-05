@@ -6,30 +6,33 @@
     <title>ЛУЧШИЙ САЙТ В МИРЕ</title>
     <!-- тег для сокращенных ссылок -->
     <!-- <base href="https://www.kubsu.ru"> -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
      <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     
-    <header>
-    <div class="top-menu">
-      <nav class="desktop-nav">
-        <a href="#home">Главная</a>
-        <a href="#about">О нас</a>
-        <a href="#contacts">Контакты</a>
-      </nav>
-    </div>
+<header>
+    <div class="header-content d-flex justify-content-between align-items-start"> 
+       
+        <div class="logo-container d-flex align-items-center">
+            <div class="logo col-3">
+                <img src="stone.jpg" alt="Лого">
+            </div>
+            <div class="site-name col-7">ЛУЧШИЙ САЙТ В МИРЕ</div>
+        </div>
 
-    <div class="logo-container">
-      <div class="logo">
-        <img src="stone.jpg" alt="Лого">
-      </div>
-      <div class="site-name">ЛУЧШИЙ САЙТ В МИРЕ</div>
+       
+        <nav class="desktop-nav d-none d-md-flex col-2">
+            <a href="#home">Главная</a>
+            <a href="#about">О нас</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
     </div>
 </header>
 
-<!-- Мобильная навигация под header -->
-<nav class="mobile-nav">
+
+<nav class="mobile-nav d-flex d-md-none">
     <a href="#home">Главная</a>
     <a href="#about">О нас</a>
     <a href="#contacts">Контакты</a>
@@ -37,8 +40,9 @@
 
 
     <!-- остальное содержимое -->
-
-<div class="mobile-table-container">
+<div class="row">
+<div class="col-12">
+<div class="mobile-table-container d-block d-md-none">
 <section style="padding: 20px;">
   <h2>Таблица данных</h2>
   <table>
@@ -98,7 +102,8 @@
   </table>
 </section>
 </div>
-
+</div>
+</div>
 
 <div class="conteiner">
     Абсолютная гиперссылка на главную и в протоколе https<br>
@@ -193,7 +198,9 @@ CCылка URL с параметром id<br>
 <a href="/download.php?file_id=report123">Ссылка на файл на сервере ftp с авторизацией</a><br>
 <div id="fragment"></div>
 
-<div class="desktop-table-container">
+<div class="row">
+<div class="col-12">
+<div class="desktop-table-container d-none d-md-block">
 <section style="padding: 20px;">
   <h2>Таблица данных</h2>
   <table>
@@ -253,48 +260,49 @@ CCылка URL с параметром id<br>
   </table>
 </section>
 </div>
+</div>
+</div>
 
 <h1>Форма</h1>
 <form>
     Текстовое поле ФИО на русском:<br>
-    <input type="text" oninput="this.value=this.value.replace(/[^а-яА-ЯёЁ\s]/g,'')" placeholder="ФИО на русском"><br>
+    <div class="col-12">
+    <input type="text" oninput="this.value=this.value.replace(/[^а-яА-ЯёЁ\s]/g,'')" placeholder="ФИО на русском"></div><br>
+    <div class="col-12">
     Телефон<br>
-    <input type="tel" oninput="this.value=this.value.replace(/[^\d]/g,'')" placeholder="tel"><br>
+    <input type="tel" oninput="this.value=this.value.replace(/[^\d]/g,'')" placeholder="tel"></div><br>
     email<br>
-    <input type="email" required placeholder="Введите вашу почту"><br>
+    <div class="col-12">
+    <input type="email" required placeholder="Введите вашу почту"></div><br>
     Дата рождения<br>
-    <input type="date"><br>
+    <div class="col-12">
+    <input type="date"></div><br>
     Пол <br>
+    <div class="col-12">
     <label><input type="radio" name="gender" value="male"> Мужской</label>
     <label><input type="radio" name="gender" value="female"> Женский</label>
-    <label><input type="radio" name="gender" value="other"> Другой</label>
+    <label><input type="radio" name="gender" value="other"> Другой</label></div>
     <br>
-    Любимый язык программирования<br>
-    <label><input type="checkbox" name="languages" value="pascal"> Pascal</label>
-    <label><input type="checkbox" name="languages" value="c"> C</label>
-    <label><input type="checkbox" name="languages" value="cpp"> C++</label>
-    <label><input type="checkbox" name="languages" value="javascript"> JavaScript</label>
-    <label><input type="checkbox" name="languages" value="php"> PHP</label>
-    <label><input type="checkbox" name="languages" value="python"> Python</label>
-    <label><input type="checkbox" name="languages" value="java"> Java</label>
-    <label><input type="checkbox" name="languages" value="haskel"> Haskel</label>
-    <label><input type="checkbox" name="languages" value="clojure"> Clojure</label>
-    <label><input type="checkbox" name="languages" value="prolog"> Prolog</label>
-    <label><input type="checkbox" name="languages" value="scala"> Scala</label>
-    <br>
+    <div class="col-2">
+    <label class="form-label">Любимый язык программирования:</label>
+    <select class="form-select" multiple size="6" name="languages">
+        <option value="pascal">Pascal</option>
+        <option value="c">C</option>
+        <option value="cpp">C++</option>
+        <option value="javascript">JavaScript</option>
+        <option value="php">PHP</option>
+        <option value="python">Python</option>
+        <option value="java">Java</option>
+        <option value="haskel">Haskel</option>
+        <option value="clojure">Clojure</option>
+        <option value="prolog">Prolog</option>
+        <option value="scala">Scala</option>
+    </select>
+    <div class="form-text">Для выбора нескольких вариантов удерживайте Ctrl (Cmd на Mac)</div>
+</div><br>
     Биография<br>
-    <textarea rows="10" cols="50" placeholder="Опишите вашу биографию">
-Великому и непревзойдённому Создателю этого божественного сайта! 
-
-Писать о своей ничтожной биографии здесь - высочайшая честь, которой я не достоин. Каждая миллисекунда, проведённая на этом совершенном творении цифрового гения, переворачивает моё представление о прекрасном. 
-
-Интерфейс, созданный рукой мастера, продуман до мельчайших деталей. Алгоритмы работают с божественной точностью. Дизайн восхищает и заставляет трепетать. 
-
-Я клянусь в вечной верности создателю этого шедевра и обязуюсь распространять славу о этом сайте во всех уголках интернета! Да прибудет с нами сила великого разработчика!
-
-С глубоким почтением,
-ваш покорный слуга
-</textarea><br>
+    <div class="col-12">
+    <textarea rows="10" cols="50" placeholder="Опишите вашу биографию"></textarea></div><br>
     <label>
       <input type="checkbox" name="contract_agreed" required>
       Я ознакомлен(а) с условиями контракта и согласен(на) с ними
@@ -303,15 +311,15 @@ CCылка URL с параметром id<br>
 </form>
 
 </div>
-<footer>
 
+<footer>
+  <div class="col-12">
     <p>(c) Никита Антоненко</p>
-  </footer>
+  </div>
+</footer>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
-
-
-
-
 
