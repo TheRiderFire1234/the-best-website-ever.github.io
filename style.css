@@ -15,6 +15,7 @@ header {
   margin-bottom: 10px;
 }
 
+
 /* Навигация - мобильная версия по умолчанию */
 .mobile-nav {
   display: flex;
@@ -35,11 +36,6 @@ header {
 
 .mobile-nav a:hover {
   background: #3da52f;
-}
-
-/* Десктопная навигация скрыта по умолчанию */
-.desktop-nav {
-  display: none;
 }
 
 /* Общие стили для ссылок */
@@ -65,9 +61,6 @@ nav a:hover {
   margin-top: 0;
 }
 
-.desktop-table-container {
-  display: none;
-}
 
 /* Контейнер по умолчанию */
 .container {
@@ -151,19 +144,8 @@ footer p {
 }
 
 /* ===== ДЕСКТОПНАЯ ВЕРСИЯ ===== */
-@media (min-width: 769px) {
-  .mobile-nav {
-    display: none;
-  }
+
   
-  .desktop-nav {
-    display: flex;
-    gap: 15px;
-  }
-  
-  .mobile-table-container {
-    display: none;
-  }
   
   .desktop-table-container {
     display: block;
@@ -190,11 +172,10 @@ footer p {
     padding: 10px;
     white-space: normal;
   }
-}
+
 
 /* ===== БОЛЬШИЕ ЭКРАНЫ ===== */
-@media (min-width: 1025px) {
+
   .container {
     max-width: 1400px;
   }
-}
